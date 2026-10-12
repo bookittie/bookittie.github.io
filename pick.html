@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> Welcome to Bowler-ama</title>
+<header class="site-header">
+  <!-- Wrapping the image in a link to the homepage is standard practice -->
+
+    <img src="bowlerama.png" alt="Website Logo or Banner" class="header-img">
+</header>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+text1 = "yes!  " +  
+	"Yas!     Today is my day!       " + 
+        "I can't wait to see our score!    Im the fastest one!     " +
+	"Help us! " +
+        "Trust me boss!    " +
+        "You just wait and see!        " +
+        "I feel like I have done this before...     "
+        
+
+text2 = "Let's Play.   " + 
+        "Oh my goodness!   I’ve been chosen!    " +
+	"It’s happening!  " + 
+	"It is finally happening!          Leave me alone!            " +
+        "Please stay and play          Look at me, world! I’m going out there!            Don't you try to run away!!!        "
+
+
+
+function scroll1()
+{
+	document.forms[0].text1.value = text1
+	text1 = text1.substring(1, text1.length) + text1.substring(0,1)
+	setTimeout("scroll1()", 250)
+}
+
+function scroll2()
+{
+	document.forms[0].text2.value = text2
+	text2 = text2.substring(1, text2.length) + text2.substring(0,1)
+	setTimeout("scroll2()", 150)
+}
+
+
+
+// -->
+</SCRIPT>
+<BODY onLoad = "scroll1(), scroll2(), scroll3()" BGCOLOR="#FF33FF" BACKGROUND="bowlingback.jpg" link="#FF00CC" vlink="#CC00CC" alink="#33FF33">
+<FORM METHOD="GET" ACTION="">
+
+  <div ALIGN="LEFT">
+    <input TYPE="TEXT" NAME="text1" SIZE="50" font-size: 24px>
+  </div>
+  <BR>
+  <BR>
+<img src="pick.jpg" alt="congrats on picking your partner" usemap="#pick" style="width: 1500px; ">
+
+<map name="pick">
+  <area shape="rect" coords="455, 687, 898, 1121" alt="bowling ball" href="release.html">
+
+</map>
+<div ALIGN="RIGHT">
+<input TYPE="TEXT" NAME="text2" SIZE="50" font-size: 24px>
+
+
+
+
+
+</body>
+</html>

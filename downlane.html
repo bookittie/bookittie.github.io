@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> Welcome to Bowler-ama</title>
+<header class="site-header">
+  <!-- Wrapping the image in a link to the homepage is standard practice -->
+
+    <img src="bowlerama.png" alt="Website Logo or Banner" class="header-img">
+</header>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+text1 = "Hold on. This friction... it feels... familiar.  " +
+	"Have I... have I spun like this before?     No, no, that’s crazy, I was just born thirty seconds ago on that nice metal rack.       " + 
+        "Getting closer to the pins~    Im the fastest one!     " +
+	"Help us! " +
+        "Will this hurt? " +
+        "Momma was right!    This is a fun career        " +
+        "I wanted to be a beach ball when I was a little ball... "
+        
+
+text2 = "The antici-.....         pation....." + 
+        "And those guys. The white triangles.   A loud, crushing... CRACK.    " +
+	"Why does looking at them make my phantom teeth hurt?  " + 
+	"There’s this weird... echo in my head. Like a sound.         *Leave me alone!*           " +
+        "A loud, crushing...               CRACK.        "
+
+
+
+function scroll1()
+{
+	document.forms[0].text1.value = text1
+	text1 = text1.substring(1, text1.length) + text1.substring(0,1)
+	setTimeout("scroll1()", 250)
+}
+
+function scroll2()
+{
+	document.forms[0].text2.value = text2
+	text2 = text2.substring(1, text2.length) + text2.substring(0,1)
+	setTimeout("scroll2()", 150)
+}
+
+
+
+// -->
+</SCRIPT>
+<BODY onLoad = "scroll1(), scroll2(), scroll3()" BGCOLOR="#FF33FF" BACKGROUND="bowlingback.jpg" link="#FF00CC" vlink="#CC00CC" alink="#33FF33">
+<FORM METHOD="GET" ACTION="">
+
+  <div ALIGN="LEFT">
+    <input TYPE="TEXT" NAME="text1" SIZE="50" font-size: 24px>
+  </div>
+  <BR>
+  <BR>
+<img src="downlane.jpg" alt="doing its job" usemap="#down" style="width: 1500px; ">
+
+<map name="down">
+  <area shape="rect" coords="650, 550, 891, 774" alt="rolling" href="somepins.html" onclick="handleSequenceClick();" alt="Multi-link Hotspot">
+  
+</map>
+<!-- 3. The JavaScript Logic -->
+  <script>
+    // List of URLs to cycle through
+    const pages = [
+      "somepins.html",
+      "gutter.html",
+      "strike.html"
+    ];
+
+    function handleSequenceClick() {
+    // Retrieve the previous click count from localStorage, defaulting to 0 if it doesn't exist yet
+    let currentClicks = parseInt(localStorage.getItem('mapClickCount')) || 0;
+
+    // Determine which link to use based on the current click count
+    // using the remainder operator (%) so it cycles back if it goes past 3 clicks
+    let linkIndex = currentClicks % linksSequence.length;
+    let targetLink = linksSequence[linkIndex];
+
+    // Increment the click count and save it back to the browser's memory
+    currentClicks++;
+    localStorage.setItem('mapClickCount', currentClicks);
+
+    // Redirect the browser to the assigned link
+    window.location.href = targetLink;
+  }
+</script>
+
+<div ALIGN="RIGHT">
+<input TYPE="TEXT" NAME="text2" SIZE="50" font-size: 24px>
+
+
+
+
+
+</body>
+</html>

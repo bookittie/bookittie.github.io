@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> Welcome to Bowler-ama</title>
+<header class="site-header">
+  <!-- Wrapping the image in a link to the homepage is standard practice -->
+
+    <img src="bowlerama.png" alt="Website Logo or Banner" class="header-img">
+</header>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+text1 = "yes!  " +  
+	"Yas!     Today is my day!       " + 
+        "I can't wait to see our score!    Im the fastest one!     " +
+	"Help us! " +
+        "Trust me boss!    " +
+        "You just wait and see!        " +
+        "I feel like I have done this before...     "
+        
+
+text2 = "Whoa!   I have never gone this fast before...   " + 
+        "This is fun!   Oh.... I----I am starting to feel sick    " +
+	"It’s happening!  " + 
+	"This is what the others talk about?!          Please make this stop!!!            " +
+        "Oh.....ohhhhh Im feeling a little green         Stop the ride!!            I don't want to do this any more....        "
+
+
+
+function scroll1()
+{
+	document.forms[0].text1.value = text1
+	text1 = text1.substring(1, text1.length) + text1.substring(0,1)
+	setTimeout("scroll1()", 250)
+}
+
+function scroll2()
+{
+	document.forms[0].text2.value = text2
+	text2 = text2.substring(1, text2.length) + text2.substring(0,1)
+	setTimeout("scroll2()", 150)
+}
+
+
+
+// -->
+</SCRIPT>
+<BODY onLoad = "scroll1(), scroll2(), scroll3()" BGCOLOR="#FF33FF" BACKGROUND="bowlingback.jpg" link="#FF00CC" vlink="#CC00CC" alink="#33FF33">
+<FORM METHOD="GET" ACTION="">
+
+  <div ALIGN="LEFT">
+    <input TYPE="TEXT" NAME="text1" SIZE="50" font-size: 24px>
+  </div>
+  <BR>
+  <BR>
+<img src="release.jpg" usemap="#cyclemap" alt="Interactive Map" style="width: 1500px; ">
+
+<map name="cyclemap">
+  <area shape="rect" coords="784, 375, 959, 564" alt="Cycle Button" href="downlane.html">
+</map>
+<!-- 3. The JavaScript Logic -->
+  <!-- 2. The JavaScript Code -->
+<script>
+  // Define the list of URLs you want to cycle through
+  const cyclePages = ["somepins.html", "strike.html", "gutter.html"];
+
+  // Get the last recorded index from localStorage, default to 0
+  let savedIndex = localStorage.getItem("currentCycleIndex") || "0";
+  let index = parseInt(savedIndex, 10);
+
+  // Ensure index stays within bounds
+  if (index >= cyclePages.length) {
+    index = 0;
+  }
+
+  // Target the specific area in your image map
+  const activeArea = document.getElementById("cycleArea");
+
+  // Set its destination to the current page in the cycle
+  activeArea.href = cyclePages[somepins];
+
+  // Update the counter for the NEXT page load when clicked
+  activeArea.addEventListener("click", function() {
+    let nextIndex = (index + 1) % cyclePages.length;
+    localStorage.setItem("currentCycleIndex", nextIndex);
+  });
+</script>
+
+<div ALIGN="RIGHT">
+<input TYPE="TEXT" NAME="text2" SIZE="50" font-size: 24px>
+
+
+
+
+
+</body>
+</html>
