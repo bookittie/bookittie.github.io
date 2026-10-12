@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> Welcome to Bowler-ama</title>
+<header class="site-header">
+  <!-- Wrapping the image in a link to the homepage is standard practice -->
+
+    <img src="bowlerama.png" alt="Website Logo or Banner" class="header-img">
+</header>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+text1 = "Here's hoping that I get picked this time!  " +  
+	"Pick me     Oh please pick me!       " + 
+        "No! Pick me!    Im the fastest one!     " +
+	"Help us! " +
+        "Please.   Please, oh Please!    Pick me! " +
+        "Yes! You're hovering over the right ball        " +
+        "Run before you get caught up as well! "
+        
+
+text2 = "Let's Play.   " + 
+        "Time to pick your vict... I mean, pick your ball   " +
+	"Play with us  " + 
+	"Leave me alone!          Leave me alone!            " +
+        "Please stay and play          Come Play!            Don't you try to run away!!!        "
+
+
+
+function scroll1()
+{
+	document.forms[0].text1.value = text1
+	text1 = text1.substring(1, text1.length) + text1.substring(0,1)
+	setTimeout("scroll1()", 250)
+}
+
+function scroll2()
+{
+	document.forms[0].text2.value = text2
+	text2 = text2.substring(1, text2.length) + text2.substring(0,1)
+	setTimeout("scroll2()", 150)
+}
+
+
+
+// -->
+</SCRIPT>
+<BODY onLoad = "scroll1(), scroll2(), scroll3()" BGCOLOR="#FF33FF" BACKGROUND="bowlingback.jpg" link="#FF00CC" vlink="#CC00CC" alink="#33FF33">
+<FORM METHOD="GET" ACTION="">
+
+  <div ALIGN="LEFT">
+    <input TYPE="TEXT" NAME="text1" SIZE="50" font-size: 24px>
+  </div>
+  <BR>
+  <BR>
+<img src="ballpick.jpg" alt="pick your ball" usemap="#ball-pick" style="width: 1500px; ">
+
+<map name="ball-pick">
+  <area shape="rect" coords="413, 376, 582, 512" alt="yellowball" href="pick.html">
+  <area shape="rect" coords="670, 360, 819, 480" alt="handball" href="pick.html">
+  <area shape="rect" coords="845, 472, 1041, 285" alt="ball three" href="pick.html">
+</map>
+<div ALIGN="RIGHT">
+<input TYPE="TEXT" NAME="text2" SIZE="50" font-size: 24px>
+
+
+
+
+
+</body>
+</html>
