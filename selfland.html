@@ -51,5 +51,114 @@
   }
 </style>
 </div>
+<div class="p5-code-container">
+                    <pre><code id="p5SourceCode">
+function setup() {
+createCanvas(600, 1067);
+}
+
+
+function draw() {
+background(155, 170, 180);
+
+// shoulders
+fill (244, 194, 194);
+quad (0, 740, 600, 740, 600, 1067, 0, 1067);
+
+//hair
+fill(255, 105, 180);
+rect(17, 23, 583, 927); 
+
+//neck and chest
+fill (252, 213, 206);
+quad (155, 660, 432, 740, 352, 1067, 190, 1067);
+
+//breast line
+line(282, 963, 264, 1067);
+
+//face
+fill (252, 213, 206);
+ellipse(313, 473, 453, 635); 
+
+//nose ring
+fill(245, 213, 189);
+circle(228, 556, 43, 43); 
+
+//septum
+fill(162, 154, 146);
+circle(275, 579, 57, 57); 
+
+//nose
+fill (252, 213, 206);
+triangle(270, 431, 331, 573, 215, 562);
+
+//left eyebrow
+fill(77, 73, 64);
+triangle(110, 365, 232, 360, 216, 392);
+
+//glasses code
+
+//glasses bridge
+fill(255, 182, 193);
+quad(242, 417, 320, 420, 320, 455, 240, 445);
+
+//left outside glasses frame
+fill(255, 182, 193);
+quad(14, 367, 255, 375, 243, 524, 55, 497);
+
+//left inside glasses frame
+fill (252, 213, 206);
+quad(35, 380, 235, 385, 224, 509, 70, 490);
+
+//left eye lash
+fill(0, 0, 0);
+ellipse(155, 415, 136, 52);
+
+//left eye white
+fill (255, 255, 255);
+ellipse(165, 419, 110, 40);
+
+//left iris
+fill(68, 105, 104);
+ellipse(180, 419, 41, 34);
+
+//right eye brow
+fill(77, 73, 64);
+beginShape();
+vertex(340, 379);
+vertex(433, 349);
+vertex(515, 379);
+vertex(453, 370);
+vertex(377, 383);
+endShape(CLOSE);
+
+//right glasses frames
+fill(255, 182, 193);
+quad(311, 375, 546, 390, 510, 540, 309, 521);
+
+//right glasses inside
+fill (252, 213, 206);
+quad(330, 390, 525, 405, 500, 520, 329, 510);
+
+//right eye lashes
+fill(0, 0, 0);
+ellipse(401, 430, 136, 52);
+
+//right eye white
+fill(255, 255, 255);
+ellipse(390, 431, 110, 40);
+
+//right eye iris
+fill(68, 105, 104);
+ellipse(400, 431, 41, 34);
+
+//smile
+fill(219, 165, 171);
+triangle(193, 640, 250, 633, 260, 650);
+triangle(258, 656, 290, 635, 344, 662);
+quad(193, 640, 344, 662, 292, 694, 232, 685);
+}
+ </code></pre>
+                </div>
 </body>
 </html>
