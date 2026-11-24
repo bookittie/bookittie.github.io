@@ -10,7 +10,7 @@ function preload() {
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   img = loadImage('https://bookittie.github.io/game/flare.png');
-    img2 = loadImage('https://bookittie.github.io/game/jolt.jpg');
+    img2 = loadImage('https://bookittie.github.io/game/jolt.png');
       img3 = loadImage('https://bookittie.github.io/game/eevee.png');
         img4 = loadImage('https://bookittie.github.io/game/back.jpg');
         img5 = loadImage('https://bookittie.github.io/game/umb.png');
@@ -51,7 +51,10 @@ function draw() {
 function titleScreen(){
   text("Eevee evolve, help each Eevee evolve into the next evolution", width/2, height-20);
   var distToBall= dist(ballx, bally, mouseX, mouseY);
-  if (distToBall 0){
+  if (distToBall<ballSize/2){
+    ballx=random(width);
+    bally=random(height);
+    score=score+1;
 // call level 2
  // fill(random(255));
  gameState= "L1";
@@ -68,12 +71,17 @@ function titleScreen(){
 function levelOne(){
   text("Level 1", width/2, height-20);
   var distToBall= dist(ballx, bally, mouseX, mouseY);
-  if (distToBall 5){
+  if (distToBall<ballSize/2){
 // call level 2
  // fill(random(255));
- gameState= "L2";
+     ballx=random(width);
+    bally=random(height);
+    score=score+1;
   }
-  
+ if (score>10){   
+ gameState= "L2";
+ }
+
 
   line(ballx, bally, mouseX, mouseY);
   image(img, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
@@ -85,11 +93,19 @@ function levelTwo(){
   background(img4);
   text("Level 2", width/2, height-20);
   var distToBall= dist(ballx, bally, mouseX, mouseY);
-  if (distToBall 10){
+  if (distToBall<ballSize/2){
 // lvel 3
-   gameState = "L3";
-
+    ballx=random(width);
+    bally=random(height);
+    score=score+1;
   }
+   if (score>19) {
+     
+   gameState = "L3";
+   
+   }
+
+  
   
 //  line(ballx, bally, mouseX, mouseY);
 image(img5, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
@@ -100,13 +116,17 @@ function levelThree(){
     background(img4);
   text("Level 3", width/2, height-20);
   var distToBall= dist(ballx, bally, mouseX, mouseY);
-  if (distToBall 49){
+  if (distToBall<ballSize/2){
 // level 4
-   gameState = "win";
+    ballx=random(width);
+    bally=random(height);
+  score=score+1;
    
 
   }
-  
+  if (score >29){
+   gameState = "win";
+  }
 //  line(ballx, bally, mouseX, mouseY);
 //  ellipse(ballx, bally, ballSize, ballSize);
   image(img6, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
